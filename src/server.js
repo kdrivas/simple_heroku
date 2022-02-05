@@ -16,7 +16,7 @@ import myLogger from './logger.js';
 
 const argv = yargs(hideBin(process.argv)).default({
   modo: 'FORK',
-  port: process.env.port
+  port: process.env.PORT
 })
 .argv
 
@@ -198,7 +198,7 @@ else {
 
     res.json({'message': 'Not exist or authorized'})
   })
-  console.log(process.env.port)
+  console.log(process.env.PORT)
   const port = argv.port || 8080
   const server = httpServer.listen(port, () => {
     console.log(`listening at port ${port} with process ${process.pid}`)
