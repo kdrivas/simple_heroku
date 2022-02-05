@@ -16,7 +16,7 @@ import myLogger from './logger.js';
 
 const argv = yargs(hideBin(process.argv)).default({
   modo: 'FORK',
-  puerto: 8080
+  puerto: process.env.port
 })
 .argv
 
